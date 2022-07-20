@@ -1,11 +1,11 @@
 const axios = require('axios');
 
-const sendGetRequest = async (path) => {
+const greetings = async () => {
   const config = {
     timeout: 100,
     headers: { 'User-Agent': 'NewbieToAxiosAndNock' },
   };
-  return axios.get(`${process.env.HELLO_WORLD_DOMAIN}${path}`, config)
+  return axios.get(`${process.env.HELLO_WORLD_DOMAIN}/greetings`, config)
 };
 
-module.exports = { sendGetRequest };
+module.exports = { greetings };
