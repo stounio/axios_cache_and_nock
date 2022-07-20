@@ -1,7 +1,10 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const { expect } = chai;
+const nock = require('nock');
+const axios = require('axios');
+axios.defaults.adapter = require('axios/lib/adapters/http');
 
+const { expect } = chai;
 chai.use(chaiAsPromised);
 
 const { sendGetRequest } = require('../src/hello_world_client');
@@ -14,9 +17,13 @@ beforeEach(() => {
 
 describe('Axios client', async () => {
   it('should greet the world with hello', async () => {
+    const scope = nock(TEST_DOMAIN)
+    .get('/greetings')
+    .reply(200, {message: 'Hello World'});
     const response = await sendGetRequest('/greetings');
     expect(response.status).to.equal(200);
-    expect(response.data).to.equal({ message: 'Hello World' });
+    expect(response.data).to.deep.equal({ message: 'Hello World' });
+    scope.done();
   });
 });
 
