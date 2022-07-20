@@ -1,7 +1,7 @@
 {
-  "name": "axios_and_nock",
+  "name": "axios_cache_and_nock",
   "version": "1.0.0",
-  "description": "Sample project for testing Axios using Nock",
+  "description": "Sample project for testing Axios with local in memory cache using Nock",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha"
