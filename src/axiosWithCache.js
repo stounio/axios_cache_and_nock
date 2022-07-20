@@ -1,5 +1,7 @@
 const Axios = require('axios');
+// Development version of axios-cache-interceptor including debugging logs
 const { setupCache } = require('axios-cache-interceptor/dev');
+// const { setupCache } = require('axios-cache-interceptor');
 
 const axios = setupCache(Axios, {
   // The time until the cached value is expired in milliseconds.
