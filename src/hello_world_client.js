@@ -1,4 +1,4 @@
-const axios = require('axios');
+const { axios } = require('./axiosWithCache');
 
 const greetings = async (name = 'World') => {
   const config = {
