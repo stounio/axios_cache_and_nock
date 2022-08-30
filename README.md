@@ -3,6 +3,7 @@
 ## Introduction
 
 This project provides an example of an Axios Http client using an in memory cache with Axios-Cache-Interceptor.
+
 It contains examples of tests that use Nock mocking framework for intercepting HTTP requests sent by the Axios client.
 
 Packages on NPM:
@@ -17,7 +18,7 @@ Packages on NPM:
 
 `Nock` is currently the most popular mocking framework for intercepting HTTP requests and emulating interactions with a backend service. Its implementation is superior to alternative mocking framework such as `AxiosMock` and its interface easier to use when instrumenting calls to a backend service.
 
-# Run the tests
+## Run the tests
 
 ```shell
 npm install
