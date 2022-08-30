@@ -3,7 +3,7 @@ const { axios } = require('./axiosWithCache');
 const greetings = async (name = 'World') => {
   const config = {
     timeout: 100,
-    headers: { 'User-Agent': 'NewbieToAxiosAndNock' },
+    headers: { 'User-Agent': 'NewbieToAxiosCacheAndNock' },
     params: {
       name,
     }
